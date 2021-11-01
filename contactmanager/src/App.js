@@ -6,8 +6,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Contact />
+      <Header branding="Contact manager" />
+      <Contact name="John" email="john@gamil.com" phone="555-555-5555" />
+      <Contact name="oli Ullah" email="oli@gamil.com" phone="01860594161" />
     </div>
   );
 }
