@@ -8,26 +8,37 @@ class Contact extends Component {
   //     phone: PropTypes.string.isRequired,
   //   };
 
-  state = {};
-
-  onShowClick = (name, e) => {
-    console.log(name);
+  state = {
+    showStateInfo: false,
   };
+
+  // onShowClick = () => {
+  //   this.setState({
+  //     showStateInfo: !this.state.showStateInfo,
+  //   });
+  // };
   render() {
     const { name, email, phone } = this.props.contact;
+    const { showStateInfo } = this.state;
     return (
       <div className="card card-body mb-3">
         <h4>
           {name}
           <i
-            onClick={this.onShowClick.bind(this, name)}
+            onClick={() =>
+              this.setState({
+                showStateInfo: !this.state.showStateInfo,
+              })
+            }
             className="fas fa-sort-down"
           ></i>
         </h4>
-        <ul className="list-group">
-          <li className="list-group-item">Email:{email}</li>
-          <li className="list-group-item">Phone: {phone}</li>
-        </ul>
+        {showStateInfo ? (
+          <ul className="list-group">
+            <li className="list-group-item">Email:{email}</li>
+            <li className="list-group-item">Phone: {phone}</li>
+          </ul>
+        ) : null}
       </div>
     );
   }
