@@ -8,7 +8,7 @@ class Contact extends Component {
   //     phone: PropTypes.string.isRequired,
   //   };
   render() {
-    const { name, email, phone } = this.props;
+    const { name, email, phone } = this.props.contact;
     return (
       <div className="card card-body mb-3">
         <h4>{name}</h4>
