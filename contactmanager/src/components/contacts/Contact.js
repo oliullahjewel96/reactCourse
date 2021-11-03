@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Consumer } from "../context";
+import { Consumer } from "../../context";
 
 class Contact extends Component {
   //   static propTypes = {
@@ -49,8 +49,8 @@ class Contact extends Component {
               </h4>
               {showStateInfo ? (
                 <ul className="list-group">
-                  <li className="list-group-item">Email:{email}</li>
-                  <li className="list-group-item">Phone: {phone}</li>
+                  <li className="list-group-item"> Email: {email} </li>{" "}
+                  <li className="list-group-item"> Phone: {phone} </li>{" "}
                 </ul>
               ) : null}
             </div>
