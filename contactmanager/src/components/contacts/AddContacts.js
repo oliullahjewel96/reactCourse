@@ -45,6 +45,7 @@ class AddContacts extends Component {
       errors: {},
     });
   };
+
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
   render() {
     const { name, email, phone, errors } = this.state;
